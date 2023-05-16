@@ -27,10 +27,7 @@ var maxProfit = function(prices) {
 
     while(l<prices.length){
     let cp =prices[l];
-    let max =0;
    
-    let sp =0;
-
     for(let i=l+1;i<prices.length;i++){
         let maxData =0
         if(prices[i]>cp){
@@ -46,7 +43,7 @@ var maxProfit = function(prices) {
 return profit;
 };
 
-const maxProfit = (prices) => {
+const maxProfit1 = (prices) => {
     let left = 0; // Buy
     let right = 1; // sell
     let max_profit = 0;
@@ -63,4 +60,4 @@ const maxProfit = (prices) => {
     return max_profit;
   };
 
-console.log(maxProfit(prices),"profit")
+console.log(maxProfit1(prices),"profit")
