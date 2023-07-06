@@ -24,6 +24,6 @@ const validAnagram =(str,str1)=>{
     }
 return true;
 }
-
+//tno(n)so(n)
 let res = validAnagram(char,char1);
 console.log(res,"result")
