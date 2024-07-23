@@ -39,3 +39,22 @@ var c = a
 .reverse()
 // join the array of characters back to a string
 .join( "" );
+
+
+// toFixed
+
+// the toFixed(..) method allows you to specify how many fractional decimal places you’d like the value to be represented with:
+
+var a = 42.59;
+    a.toFixed( 0 ); // "43"
+    a.toFixed( 1 ); // "42.6"
+    a.toFixed( 2 ); // "42.59"
+    a.toFixed( 3 ); // "42.590"
+    a.toFixed( 4 ); // "42.5900"
+
+    // invalid syntax:
+    42.toFixed( 3 );    // SyntaxError
+    // these are all valid:
+    (42).toFixed( 3 );  // "42.000"
+    0.42.toFixed( 3 );  // "0.420"
+    42..toFixed( 3 );   // "42.000"
