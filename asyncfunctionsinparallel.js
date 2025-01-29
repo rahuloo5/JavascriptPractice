@@ -48,3 +48,18 @@ const taskList = [
 asyncParallel(taskList, result => {
   console.log('results', result);
 });
+
+
+// function createAsyncTask() {
+//   const value = Math.floor(Math.random() * 10);
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       if (value < 5) {
+//         reject(`Error ${value}`);
+//       } else {
+//         resolve(value * 1000);
+//       }
+//     }, value * 1000);
+//   });
+// }
+
