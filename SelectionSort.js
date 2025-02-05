@@ -1,20 +1,17 @@
-const selectionSort=(arr)=>{
-    for(let i =0; i<arr.length-1;i++){
-        let minIndex=i;
-        for(let j =i+1; j<arr.length;j++){
-            if(arr[minIndex]>arr[j]){
-                minIndex= j;
-            }
-           
-        }
-        [arr[i],arr[minIndex]] = [arr[minIndex],arr[i]]
-       
+function selectionSort(arr) {
+  for(let i = 0; i < arr.length; i++) {
+    let minIndex = i
+    let min = arr[minIndex]
+    for(let j = i + 1; j < arr.length; j++) {
+      if (arr[j] < min) {
+        minIndex = j
+        min = arr[j]
+      }
     }
-    console.log(arr,"array")
+    swap(arr, i, minIndex)
+  }
 }
-
-const arr =[2,3,5,4,1,9,8,7,6]
-
-selectionSort(arr)
-
-//worst o(n2)
+function swap(arr, x, y) {
+  if (x === y) return
+  [arr[x], arr[y]] = [arr[y], arr[x]];
+}
