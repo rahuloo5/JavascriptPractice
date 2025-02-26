@@ -13,3 +13,9 @@ function * range(from, to) {
     yield from++
   }
 }
+
+let value = range(1,5);
+
+for(let instance of value){
+    console.log(instance)
+}
