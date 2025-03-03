@@ -9,3 +9,18 @@ function curry(fn) {
     }
   }
 }
+
+
+function sum(a){
+    
+    return function inner(b){
+        if(!b){
+            return a
+        } else{
+           return sum(a+b)
+        }
+    }
+}
+
+
+console.log(sum(1)(2)(3)(4)(5)(6)(8)())
