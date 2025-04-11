@@ -61,3 +61,25 @@ const maxProfit1 = (prices) => {
   };
 
 console.log(maxProfit1(prices),"profit")
+
+
+var maxProfit = function(prices) {
+    let Maxprofit =0;
+    let cp = prices[0];
+
+    for(let i =1 ; i<prices.length;i++){
+      let sp =prices[i]
+   
+      if(sp>cp){
+          let profit = sp-cp
+        
+          Maxprofit = Math.max(profit,Maxprofit)
+         
+      } else {
+          cp = sp;
+      }
+        
+
+    }
+    return Maxprofit
+};
