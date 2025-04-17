@@ -1,17 +1,20 @@
-levelOrder(root) {
-       function dfs(node, depth) {
-            if (!node) return;
+var levelOrder = function(root) {
+    var result = [];
+    var level = 0;
+    traverse(root, level);
+    return result;
 
-            if (res.length === depth) {
-                res.push([]);
+    function traverse(root, level) {
+        if (root === null) {
+            return;
+        }
+        else {
+            if (level >= result.length) {
+                 result[level] = [];
             }
 
-            res[depth].push(node.val);
-            dfs(node.left, depth + 1);
-            dfs(node.right, depth + 1);
+            result[level].push(root.val);
+            traverse(root.left, level + 1);
+            traverse(root.right, level + 1);
         }
-
-        dfs(root, 0);
-        return res;
-
-    }
+    }};
